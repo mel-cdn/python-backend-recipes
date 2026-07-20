@@ -16,7 +16,8 @@ def main():
     users = get_users()  # Call 1st time
     print(f"Saving {len(users)} users to file...")
 
-    users = get_users()  # Should be retrieved from cache
+    # Calling for the 2nd time should be retrieved from cache
+    users = get_users()
     print(f"Saving {len(users)} users to database...")
 
 

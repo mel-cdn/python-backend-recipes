@@ -18,7 +18,8 @@ def main():
 
     get_users.cache_clear()  # Clears cache
 
-    users = get_users()  # Should be retrieved from cache
+    # Should call again since cached is cleared
+    users = get_users()
     print(f"Saving {len(users)} users to database...")
 
 
